@@ -1,9 +1,31 @@
+from PIL.ImageOps import expand
+
+from controllers import requete_utilisateurs as bd
 import  customtkinter
 from PIL import Image,ImageTk
 customtkinter.set_default_color_theme("../theme/theme.json")
-etape=0
 oeil_ouvert = customtkinter.CTkImage(light_image=Image.open("../icons/ouvert.png"), size=(20,20))
 oeil_ferme= customtkinter.CTkImage(light_image=Image.open("../icons/fermé.png"),size=(20,20))
+logo= customtkinter.CTkImage(light_image=Image.open("../icons/logo.png"),size=(150,150))
+
+etape=0
+def suivant():
+    global etape
+    if etape == 0:
+        suiv.place_forget()
+        frameForm.pack_forget()
+        barreCompte.configure(fg_color="#198754")
+        etapeCompte.configure(text_color="#198754")
+        frameConfig.pack(expand=True)
+        etape+=1
+        return
+    elif etape == 1:
+        frameForm.pack_forget()
+
+def creer():
+    insert = bd.ajouterUtilisateurs(nomUser, mdpUser)
+    if insert:
+        suiv.place(x=1050, y=590)
 def afficher_mdp():
     if champMdp.cget("show") == bullet:
         btn_oeil_mdp.configure(image=oeil_ouvert)
@@ -54,6 +76,8 @@ screen_width = app.winfo_screenwidth()
 screen_height = app.winfo_screenheight()
 app.geometry(f"{screen_width}x{screen_height}+0+0")
 app.title('KeepControl')
+im = customtkinter.CTkLabel(app,text="", image=logo)
+im.place(x=0, y=0)
 #formulaire de connexion
 nomUser = customtkinter.StringVar()
 mdpUser = customtkinter.StringVar()
@@ -90,11 +114,11 @@ btn_oeil_conf.place_forget()
 mess = customtkinter.CTkLabel(frameForm, text="", text_color="#ffc107")
 mess.place_forget()
 #boutoncréation
-creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40)
+creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40, command=lambda :creer())
 creation.place(x=450,y=500)
 #boutonsuivant
-suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,fg_color="#6c757d")
-suiv.place(x=1050,y=590)
+suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda :suivant())
+suiv.place_forget()
 #Progression
 framePro = customtkinter.CTkFrame(app, width=1250, height=58, fg_color="white")
 framePro.pack(side="bottom")
@@ -118,4 +142,7 @@ etats()
 nomUser.trace("w", lambda *args: etats())
 mdpUser.trace("w", lambda *args: etats())
 confMdp.trace("w", lambda *args: etats())
+
+#frame Config
+frameConfig = customtkinter.CTkFrame(app,width=1100,height=600,fg_color="white")
 app.mainloop()

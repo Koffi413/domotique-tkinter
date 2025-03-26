@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/icons/fermé.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/ouvert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/connect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/LOGO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modeles/utilisateurs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/pieces.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeles/pieces.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/creation_compte.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/fonction_interfaces1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/theme.json" beforeDir="false" afterPath="$PROJECT_DIR$/theme/theme.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +59,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\icons" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\database" />
+      <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\modeles" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -76,5 +81,16 @@
       <updated>1742902382252</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
