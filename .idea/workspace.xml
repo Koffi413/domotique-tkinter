@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonctions/fonctions_glob.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/projetIsiDatabase.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_glob.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_glob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/configurationMaison.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/creation_compte.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +47,7 @@
     "Python.configurationMaison.executor": "Run",
     "Python.connect.executor": "Run",
     "Python.creation_compte.executor": "Run",
+    "Python.fonctions_glob.executor": "Run",
     "Python.fonctions_interface1.executor": "Run",
     "Python.ttk.executor": "Run",
     "Python.utilisateurs.executor": "Run",

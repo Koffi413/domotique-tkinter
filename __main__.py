@@ -2,6 +2,7 @@ import customtkinter
 from  PIL import Image
 
 from interfaces.creation_compte import afficherPageCompte
+from interfaces.configurationMaison import afficherPageConfig
 
 if __name__ == '__main__':
     customtkinter.set_default_color_theme("theme/theme.json")
@@ -13,5 +14,7 @@ if __name__ == '__main__':
     root.title('KeepControl')
     im = customtkinter.CTkLabel(root, text="", image=logo)
     im.place(x=0, y=0)
-    afficherPageCompte(root)
+    suiv = customtkinter.CTkButton(root, text="Suivant", text_color="white", width=200, height=40)
+    suiv.place_forget()
+    afficherPageCompte(root,suiv)
     root.mainloop()

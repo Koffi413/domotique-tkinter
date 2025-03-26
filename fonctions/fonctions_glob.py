@@ -1,13 +1,18 @@
+import __main__
+
 etape=0
-def suivant(page1,page2):
+def suivant(root,suiv,frameForm,barreCompte,etapeCompte):
     global etape
     if etape == 0:
-       page1.suiv.place_forget()
-       page1.frameForm.pack_forget()
-       page1.barreCompte.configure(fg_color="#198754")
-       page1.etapeCompte.configure(text_color="#198754")
-       page2.frameConfig.place(x=200, y=20)
-       etape += 1
-       return
+        suiv.place_forget()
+        frameForm.pack_forget()
+        barreCompte.configure(fg_color="#198754")
+        etapeCompte.configure(text_color="#198754")
+        __main__.afficherPageConfig(root)
+        etape+=1
+        return
     elif etape == 1:
-       page1.frameForm.pack_forget()
+        frameForm.pack_forget()
+
+
+

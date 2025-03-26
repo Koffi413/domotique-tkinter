@@ -1,5 +1,5 @@
 from controllers import requete_utilisateurs as bd
-from fonctions.fonctions_glob import etape
+from fonctions.fonctions_glob import etape, suivant
 
 bullet = "\u2022"
 def creer(suiv,nomUser,mdpUser):
@@ -7,7 +7,7 @@ def creer(suiv,nomUser,mdpUser):
     mdp = mdpUser.get()
     insert = bd.ajouterUtilisateurs(nom, mdp)
     if insert:
-       suiv.place(x=1050, y=590)
+        suiv.place(x=1050, y=590)
 
 def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):
     if champMdp.cget("show") == bullet:

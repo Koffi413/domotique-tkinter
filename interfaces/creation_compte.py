@@ -4,7 +4,7 @@ from fonctions.fonctions_glob import suivant
 from PIL import Image
 
 
-def afficherPageCompte(app):
+def afficherPageCompte(app,bouton):
     oeil_ouvert = customtkinter.CTkImage(light_image=Image.open("icons/ouvert.png"), size=(20, 20))
     oeil_ferme = customtkinter.CTkImage(light_image=Image.open("icons/fermé.png"), size=(20, 20))
     # formulaire de connexion
@@ -43,11 +43,10 @@ def afficherPageCompte(app):
     mess.place_forget()
     # boutoncréation
     creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40,
-                                       command=lambda: creer(suiv,nomUser,mdpUser))
+                                       command=lambda: creer(bouton,nomUser,mdpUser))
     creation.place(x=450, y=500)
     # boutonsuivant
-    suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app))
-    suiv.place_forget()
+    bouton.configure(command=lambda :suivant(app,bouton,frameForm,barreCompte,etapeCompte))
     # Progression
     framePro = customtkinter.CTkFrame(app, width=1250, height=58, fg_color="white")
     framePro.pack(side="bottom")
