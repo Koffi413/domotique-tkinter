@@ -1,9 +1,9 @@
 import sqlite3, os.path
-bd = os.path.exists("../database/projetIsiDatabase.db")
-connect = sqlite3.connect("../database/projetIsiDatabase.db")
-cursor = connect.cursor()
+bd = os.path.exists("database/projetIsiDatabase.db")
+connect = sqlite3.connect("database/projetIsiDatabase.db")
+curseur = connect.cursor()
 if not bd:
-    cursor.execute(
+    curseur.execute(
         """
         create table UTILISATEURS (
         id integer primary key autoincrement,

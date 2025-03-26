@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database/connect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/LOGO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modeles/utilisateurs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonctions/fonctions_glob.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/pieces.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeles/pieces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/projetIsiDatabase.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/creation_compte.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -44,6 +47,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Python.__main__.executor": "Run",
+    "Python.configurationMaison.executor": "Run",
+    "Python.connect.executor": "Run",
     "Python.creation_compte.executor": "Run",
     "Python.fonctions_interface1.executor": "Run",
     "Python.ttk.executor": "Run",
@@ -60,6 +66,7 @@
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\fonctions" />
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\database" />
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\modeles" />
     </key>
