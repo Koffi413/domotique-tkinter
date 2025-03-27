@@ -24,7 +24,7 @@ def afficher_conf(btn_oeil_conf,champConf,oeil_ouvert,oeil_ferme):
         champConf.configure(show=bullet)
         btn_oeil_conf.configure(image=oeil_ferme)
 
-def etats(root,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,barreCompte,etapeCompte,etapeFin,etapeConf,barreFin,barreConf,champConf,nomUser,mdpUser,confMdp):
+def etats(root,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp):
     nom = nomUser.get()
     mdp = mdpUser.get()
     conf = confMdp.get()
@@ -46,11 +46,4 @@ def etats(root,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,barreCompte,eta
     else:
        creation.configure(state="disabled")
        creation.configure(fg_color="#D9D9D9")
-    if etape == 0:
-       barreCompte.configure(fg_color="#212529")
-       etapeCompte.configure(text_color="#212529")
-       barreConf.configure(fg_color="#D9D9D9")
-       etapeConf.configure(text_color="#D9D9D9")
-       barreConf.configure(fg_color="#D9D9D9")
-       barreFin.configure(fg_color="#D9D9D9")
-       etapeFin.configure(text_color="#D9D9D9")
+

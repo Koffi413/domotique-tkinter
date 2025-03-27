@@ -46,29 +46,8 @@ def afficherPageCompte(app,bouton):
                                        command=lambda: creer(bouton,nomUser,mdpUser))
     creation.place(x=450, y=500)
     # boutonsuivant
-    bouton.configure(command=lambda :suivant(app,bouton,frameForm,barreCompte,etapeCompte))
-    # Progression
-    framePro = customtkinter.CTkFrame(app, width=1250, height=58, fg_color="white")
-    framePro.pack(side="bottom")
-    # etape
-    barreCompte = customtkinter.CTkFrame(framePro, width=450, height=10, corner_radius=0)
-    barreCompte.place(x=0, y=0)
-    etapeCompte = customtkinter.CTkLabel(framePro, text="Création de compte", )
-    etapeCompte.cget("font").configure(size=25)
-    etapeCompte.place(x=100, y=15)
-    barreConf = customtkinter.CTkFrame(framePro, width=450, height=10, corner_radius=0)
-    barreConf.place(x=450, y=0)
-    etapeConf = customtkinter.CTkLabel(framePro, text="Configuration de la maison", )
-    etapeConf.cget("font").configure(size=25)
-    etapeConf.place(x=520, y=15)
-    barreFin = customtkinter.CTkFrame(framePro, width=450, height=10, corner_radius=0)
-    barreFin.place(x=900, y=0)
-    etapeFin = customtkinter.CTkLabel(framePro, text="Terminé")
-    etapeFin.cget("font").configure(size=25)
-    etapeFin.place(x=1050, y=15)
-    etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,barreCompte,etapeCompte,etapeFin,etapeConf,barreFin,barreConf,champConf,nomUser,mdpUser,confMdp)
-    nomUser.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,barreCompte,etapeCompte,etapeFin,etapeConf,barreFin,barreConf,champConf,nomUser,mdpUser,confMdp))
-    mdpUser.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,barreCompte,etapeCompte,etapeFin,etapeConf,barreFin,barreConf,champConf,nomUser,mdpUser,confMdp))
-    confMdp.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,barreCompte,etapeCompte,etapeFin,etapeConf,barreFin,barreConf,champConf,nomUser,mdpUser,confMdp))
-
+    bouton.configure(command=lambda :suivant(app,bouton,frameForm))
+    nomUser.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp))
+    mdpUser.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp))
+    confMdp.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp))
 
