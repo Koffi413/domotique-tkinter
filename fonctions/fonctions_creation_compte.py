@@ -9,7 +9,7 @@ def creer(app,frameForm,nomUser,mdpUser,crea):
     mdp = mdpUser.get()
     insert = bd.ajouterUtilisateurs(nom, mdp)
     if insert:
-        suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameForm,crea))
+        suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameForm,crea,None))
         suiv.place(x=1050, y=590)
 
 def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):

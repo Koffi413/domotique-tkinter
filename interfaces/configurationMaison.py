@@ -43,7 +43,7 @@ def afficherPageConfig(app):
     btnValid.place(x=300,y =380)
     btnAjout = customtkinter.CTkButton(frameConfig,text="Ajouter une autre pièce", width=100,height=30,text_color="white",fg_color="#D9D9D9",hover_color="#D9D9D9")
     btnAjout.place(x=450,y =380)
-    suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameConfig, None))
+    suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameConfig, None,nomMaison.get()))
     nomMaison.trace("w",lambda *args: activeValide(app,btnValid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))
     nomPiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))
     typePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison,nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))

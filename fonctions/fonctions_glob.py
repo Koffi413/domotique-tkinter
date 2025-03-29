@@ -1,6 +1,9 @@
+import os
+import sys
+
 import __main__
 etape=0
-def suivant(root,suiv,frameForm,crea):
+def suivant(root,suiv,frameForm,crea,nomMaison):
     global etape
     if etape == 0:
         suiv.place_forget()
@@ -25,6 +28,11 @@ def suivant(root,suiv,frameForm,crea):
         __main__.etapeConf.configure(text_color="#198754")
         __main__.barreFin.configure(fg_color="#198754")
         __main__.etapeFin.configure(text_color="#198754")
+        __main__.afficherPageRecap(root,suiv,nomMaison)
         etape+=1
     else:
         return
+def redemarrer():
+    """Redémarre l'application Tkinter."""
+    python = sys.executable
+    os.execl(python, python, *sys.argv)

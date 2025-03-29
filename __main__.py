@@ -3,6 +3,7 @@ from  PIL import Image
 
 from interfaces.creation_compte import afficherPageCompte
 from interfaces.configurationMaison import afficherPageConfig
+from  interfaces.termine import afficherPageRecap
 
 if __name__ == '__main__':
     customtkinter.set_default_color_theme("theme/theme.json")
