@@ -14,9 +14,6 @@ if __name__ == '__main__':
     root.title('KeepControl')
     im = customtkinter.CTkLabel(root, text="", image=logo)
     im.place(x=0, y=0)
-    suiv = customtkinter.CTkButton(root, text="Suivant", text_color="white", width=200, height=40)
-    suiv.place_forget()
-
     # Progression
     framePro = customtkinter.CTkFrame(root, width=1250, height=58, fg_color="white")
     framePro.pack(side="bottom")
@@ -36,5 +33,5 @@ if __name__ == '__main__':
     etapeFin = customtkinter.CTkLabel(framePro, text="Terminé",text_color="#D9D9D9")
     etapeFin.cget("font").configure(size=25)
     etapeFin.place(x=1050, y=15)
-    afficherPageCompte(root,suiv)
+    afficherPageCompte(root)
     root.mainloop()

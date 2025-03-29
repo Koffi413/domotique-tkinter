@@ -4,7 +4,7 @@ from fonctions.fonctions_glob import suivant
 from PIL import Image
 
 
-def afficherPageCompte(app,bouton):
+def afficherPageCompte(app):
     oeil_ouvert = customtkinter.CTkImage(light_image=Image.open("icons/ouvert.png"), size=(20, 20))
     oeil_ferme = customtkinter.CTkImage(light_image=Image.open("icons/fermé.png"), size=(20, 20))
     # formulaire de connexion
@@ -42,10 +42,8 @@ def afficherPageCompte(app,bouton):
     mess = customtkinter.CTkLabel(frameForm, text="", text_color="#ffc107")
     mess.place_forget()
     # boutoncréation
-    creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40,command=lambda: creer(bouton,nomUser,mdpUser),fg_color="#D9D9D9",hover_color="#D9D9D9")
+    creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40,command=lambda: creer(app,frameForm,nomUser,mdpUser,creation),fg_color="#D9D9D9",hover_color="#D9D9D9")
     creation.place(x=450, y=500)
-    # boutonsuivant
-    bouton.configure(command=lambda :suivant(app,bouton,frameForm))
     nomUser.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp))
     mdpUser.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp))
     confMdp.trace("w", lambda *args: etats(app,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUser,mdpUser,confMdp))

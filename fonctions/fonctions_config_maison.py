@@ -1,8 +1,11 @@
+import customtkinter
+
 from controllers.requete_maisons import ajouterMaisons, existeMaison
 from controllers.requete_pieces import ajouterPieces
+from fonctions.fonctions_glob import suivant
 
 
-def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece):
+def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv):
        nomMais = nomMaison.get()
        nomPie = nomPiece.get()
        superficiePie = superficiePiece.get()
@@ -12,12 +15,12 @@ def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnA
            btnvalid.configure(state="normal")
            btnvalid.configure(fg_color="#0d6efd")
            btnvalid.configure(hover_color="#3f8cfd")
-           btnvalid.configure(command=lambda :save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece))
+           btnvalid.configure(command=lambda :save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv))
        else:
               btnvalid.configure(state="disabled")
 
 
-def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece):
+def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv):
     nomMais=nomMaison.get()
     nomPiec=nomPiece.get()
     superficiePie=superficiePiece.get()
@@ -33,7 +36,7 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
     else:
         type="undefined"
     existe = existeMaison(nomMais)
-    print(len(existe))
+
     if len(existe)==0 :
         insertMaison = ajouterMaisons(nomMais,0)
         if insertMaison:
@@ -47,7 +50,8 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
                 btnAjout.configure(state="normal")
                 btnAjout.configure(fg_color="#0d6efd")
                 btnAjout.configure(hover_color="#3f8cfd")
-                btnAjout.configure(command=lambda :renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece))
+                btnAjout.configure(command=lambda :renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece,btnsuiv))
+                btnsuiv.place(x=1050, y=590)
     else:
         champMais.configure(state="disabled")
         champMais.configure(fg_color="#e6e6e6")
@@ -59,10 +63,11 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
             btnAjout.configure(state="normal")
             btnAjout.configure(fg_color="#0d6efd")
             btnAjout.configure(hover_color="#3f8cfd")
-            btnAjout.configure(command=lambda: renitialise(root, nomPiece, typePiece, superficiePiece, btnAjout, champPiece))
+            btnAjout.configure(command=lambda: renitialise(root, nomPiece, typePiece, superficiePiece, btnAjout, champPiece,btnsuiv))
+            btnsuiv.place(x=1050, y=590)
 
-
-def renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece):
+def renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece,btnsuiv):
+    btnsuiv.place_forget()
     root.update()
     champPiece.focus_set()
     nomPiece.set("")
@@ -71,3 +76,5 @@ def renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece):
     btnAjout.configure(state="disabled")
     btnAjout.configure(fg_color="#D9D9D9")
     btnAjout.configure(hover_color="#D9D9D9")
+
+

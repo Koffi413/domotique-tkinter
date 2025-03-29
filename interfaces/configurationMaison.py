@@ -1,5 +1,6 @@
 import customtkinter
 from fonctions.fonctions_config_maison import activeValide
+from fonctions.fonctions_glob import suivant
 
 
 def afficherPageConfig(app):
@@ -11,9 +12,9 @@ def afficherPageConfig(app):
 
     frameConfig = customtkinter.CTkFrame(app, width=1100, height=600)
     frameConfig.place(x=150, y=20)
-    frameTitre = customtkinter.CTkLabel(frameConfig,text="Configurations")
-    frameTitre.cget("font").configure(size=30)
-    frameTitre.place(x=7,y=7)
+    titre = customtkinter.CTkLabel(frameConfig,text="Configurations")
+    titre.cget("font").configure(size=30)
+    titre.place(x=7,y=7)
     #formulaire ajout de pieces
     labMais = customtkinter.CTkLabel(frameConfig, text="Nommez vôtre maison:")
     labMais.place(x=15,y=100)
@@ -42,7 +43,8 @@ def afficherPageConfig(app):
     btnValid.place(x=300,y =380)
     btnAjout = customtkinter.CTkButton(frameConfig,text="Ajouter une autre pièce", width=100,height=30,text_color="white",fg_color="#D9D9D9",hover_color="#D9D9D9")
     btnAjout.place(x=450,y =380)
-    nomMaison.trace("w",lambda *args: activeValide(app,btnValid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece))
-    nomPiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece))
-    typePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison,nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece))
-    superficiePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece))
+    suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameConfig, None))
+    nomMaison.trace("w",lambda *args: activeValide(app,btnValid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,suiv))
+    nomPiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv))
+    typePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison,nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv))
+    superficiePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv))

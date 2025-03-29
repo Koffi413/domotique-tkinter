@@ -1,9 +1,11 @@
 import __main__
 etape=0
-def suivant(root,suiv,frameForm):
+def suivant(root,suiv,frameForm,crea):
     global etape
     if etape == 0:
         suiv.place_forget()
+        if crea != None:
+            crea.place_forget()
         frameForm.pack_forget()
         __main__.barreCompte.configure(fg_color="#198754")
         __main__.etapeCompte.configure(text_color="#198754")
@@ -15,10 +17,14 @@ def suivant(root,suiv,frameForm):
         etape+=1
         return
     elif etape == 1:
-        frameForm.pack_forget()
+        suiv.place_forget()
+        frameForm.place_forget()
         __main__.barreCompte.configure(fg_color="#198754")
         __main__.etapeCompte.configure(text_color="#198754")
         __main__.barreConf.configure(fg_color="#198754")
         __main__.etapeConf.configure(text_color="#198754")
         __main__.barreFin.configure(fg_color="#198754")
         __main__.etapeFin.configure(text_color="#198754")
+        etape+=1
+    else:
+        return
