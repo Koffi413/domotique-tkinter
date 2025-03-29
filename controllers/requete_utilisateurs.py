@@ -12,3 +12,11 @@ def ajouterUtilisateurs(nom,mdp):
         return True
     except sqlite3.Error as e:
         return False
+def existeUtilisateurs():
+    try:
+        req = """SELECT *  FROM UTILISATEURS"""
+        connection.curseur.execute(req)
+        reponse=connection.curseur.fetchall()
+        return reponse
+    except sqlite3.Error as e:
+        return []

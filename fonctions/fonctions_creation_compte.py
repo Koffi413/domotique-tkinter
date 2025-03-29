@@ -10,7 +10,7 @@ def creer(app,frameForm,nomUser,mdpUser,crea):
     insert = bd.ajouterUtilisateurs(nom, mdp)
     if insert:
         suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameForm,crea,None))
-        suiv.place(x=1050, y=590)
+        suiv.place(relx=0.95, rely=0.90, anchor="se")
 
 def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):
     if champMdp.cget("show") == bullet:

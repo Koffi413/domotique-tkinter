@@ -22,6 +22,6 @@ def recap(nomMaison,frameRec,imgValide):
     for item in quantite:
         if item["nbre"]>0:
             imgValide.place(x=40, y=posy)
-            element = customtkinter.CTkLabel(frameRec, text=f"{item["nbre"]} {item["type"]} ajouté")
+            element = customtkinter.CTkLabel(frameRec, text=f"0{item["nbre"]} {item["type"]} ajouté")
             element.place(x=70, y=posy)
             posy=posy+40

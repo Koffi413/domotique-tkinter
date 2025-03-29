@@ -11,8 +11,8 @@ def afficherPageRecap(root, bouton, maison):
     root.geometry(f"{screen_width}x{screen_height}+0+0")
     root.title('KeepControl')
     frameRec = customtkinter.CTkFrame(root, width=800, height=400)
-    frameRec.pack(expand=True)
-    titre = customtkinter.CTkLabel(frameRec,text=f"Maison:{maison}")
+    frameRec.place(relx=0.5, rely=0.5, anchor="center")
+    titre = customtkinter.CTkLabel(frameRec,text=f"Maison: {maison}")
     titre.cget("font").configure(size=40)
     titre.place(x=240, y=0)
     logoValide =  customtkinter.CTkImage(light_image=Image.open("icons/verifie.png"), size=(20,20))
@@ -22,4 +22,9 @@ def afficherPageRecap(root, bouton, maison):
     bouton.configure(fg_color="#198754")
     bouton.configure(hover_color="#21b26f")
     bouton.configure(command=lambda :redemarrer())
-    bouton.place(x=1050, y=590)
+    bouton.place(relx=0.95, rely=0.90, anchor="se")
+    texte = ("Lorsque vous cliquez sur 'Terminé', l'application va redémarrer automatiquement.\n"
+             "À la relance, vous devrez vous reconnecter avec vos identifiants.\n"
+             "Assurez-vous d'avoir vos informations de connexion à disposition.")
+    label = customtkinter.CTkLabel(frameRec, text=texte, font=("Lota Grotesque", 18), wraplength=750, justify="center")
+    label.place(relx=0.5, rely=0.95, anchor="s")

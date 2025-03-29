@@ -1,6 +1,3 @@
-import os
-import sys
-
 import __main__
 etape=0
 def suivant(root,suiv,frameForm,crea,nomMaison):
@@ -32,7 +29,9 @@ def suivant(root,suiv,frameForm,crea,nomMaison):
         etape+=1
     else:
         return
+import os
+import sys
+
 def redemarrer():
-    """Redémarre l'application Tkinter."""
-    python = sys.executable
+    python = sys.executable  # Récupère l'exécutable Python actuel
     os.execl(python, python, *sys.argv)

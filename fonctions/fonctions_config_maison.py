@@ -52,7 +52,7 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
                 btnAjout.configure(fg_color="#0d6efd")
                 btnAjout.configure(hover_color="#3f8cfd")
                 btnAjout.configure(command=lambda :renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece,btnsuiv))
-                btnsuiv.place(x=1050, y=590)
+                btnsuiv.place(relx=0.95, rely=0.90, anchor="se")
     else:
         champMais.configure(state="disabled")
         champMais.configure(fg_color="#e6e6e6")
@@ -66,7 +66,7 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
             btnAjout.configure(fg_color="#0d6efd")
             btnAjout.configure(hover_color="#3f8cfd")
             btnAjout.configure(command=lambda: renitialise(root, nomPiece, typePiece, superficiePiece, btnAjout, champPiece,btnsuiv))
-            btnsuiv.place(x=1050, y=590)
+            btnsuiv.place(relx=0.95, rely=0.90, anchor="se")
 
 def renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece,btnsuiv):
     btnsuiv.place_forget()
