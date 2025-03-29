@@ -26,7 +26,7 @@ def afficherPageCompte(app,bouton):
     formMdp.place(x=20, y=200)
     champMdp = customtkinter.CTkEntry(frameForm, textvariable=mdpUser, width=350, height=30, show=bullet)
     champMdp.place(x=180, y=200)
-    btn_oeil_mdp = customtkinter.CTkButton(frameForm, text="", image=oeil_ferme, command= lambda :afficher_mdp(champMdp,oeil_ouvert,oeil_ferme,btn_oeil_mdp), width=10)
+    btn_oeil_mdp = customtkinter.CTkButton(frameForm, text="", image=oeil_ferme, command= lambda :afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme), width=10)
     btn_oeil_mdp.configure(fg_color="white")
     btn_oeil_mdp.configure(hover_color="white")
     btn_oeil_mdp.place_forget()
@@ -42,8 +42,7 @@ def afficherPageCompte(app,bouton):
     mess = customtkinter.CTkLabel(frameForm, text="", text_color="#ffc107")
     mess.place_forget()
     # boutoncréation
-    creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40,
-                                       command=lambda: creer(bouton,nomUser,mdpUser))
+    creation = customtkinter.CTkButton(app, text="Créer compte", text_color="white", width=400, height=40,command=lambda: creer(bouton,nomUser,mdpUser),fg_color="#D9D9D9",hover_color="#D9D9D9")
     creation.place(x=450, y=500)
     # boutonsuivant
     bouton.configure(command=lambda :suivant(app,bouton,frameForm))

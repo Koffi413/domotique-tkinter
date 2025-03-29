@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fonctions/fonctions_config_maison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/requete_maisons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/requete_pieces.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modeles/maison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_config_maison.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_config_maison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_glob.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_glob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/configurationMaison.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/creation_compte.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeles/pieces.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeles/pieces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeles/utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeles/utilisateurs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +53,10 @@
     "Python.configurationMaison.executor": "Run",
     "Python.connect.executor": "Run",
     "Python.creation_compte.executor": "Run",
+    "Python.fonctions_config_maison.executor": "Run",
     "Python.fonctions_glob.executor": "Run",
     "Python.fonctions_interface1.executor": "Run",
+    "Python.requete_maisons.executor": "Run",
     "Python.ttk.executor": "Run",
     "Python.utilisateurs.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -65,6 +71,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,6 +87,36 @@
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\database" />
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\modeles" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ProjetISI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.__main__" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,7 +134,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742902382252</updated>
-      <workItem from="1743060944554" duration="3826000" />
+      <workItem from="1743060944554" duration="3890000" />
+      <workItem from="1743071152063" duration="916000" />
+      <workItem from="1743077713917" duration="3103000" />
+      <workItem from="1743092687993" duration="11196000" />
+      <workItem from="1743188167815" duration="56000" />
+      <workItem from="1743197100423" duration="10597000" />
     </task>
     <servers />
   </component>
@@ -112,9 +158,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProjetISI$configurationMaison.coverage" NAME="configurationMaison Coverage Results" MODIFIED="1743065635098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
     <SUITE FILE_PATH="coverage/ProjetISI$fonctions_glob.coverage" NAME="fonctions_glob Coverage Results" MODIFIED="1743066112568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fonctions" />
+    <SUITE FILE_PATH="coverage/ProjetISI$configurationMaison.coverage" NAME="configurationMaison Coverage Results" MODIFIED="1743099829401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
+    <SUITE FILE_PATH="coverage/ProjetISI$fonctions_config_maison.coverage" NAME="fonctions_config_maison Coverage Results" MODIFIED="1743100020617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fonctions" />
+    <SUITE FILE_PATH="coverage/ProjetISI$requete_maisons.coverage" NAME="requete_maisons Coverage Results" MODIFIED="1743206821312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controllers" />
     <SUITE FILE_PATH="coverage/ProjetISI$creation_compte.coverage" NAME="creation_compte Coverage Results" MODIFIED="1743061866296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
-    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743066177887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743207735689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

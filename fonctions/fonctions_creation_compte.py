@@ -1,5 +1,4 @@
 from controllers import requete_utilisateurs as bd
-from fonctions.fonctions_glob import etape, suivant
 
 bullet = "\u2022"
 def creer(suiv,nomUser,mdpUser):
@@ -14,8 +13,9 @@ def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):
        btn_oeil_mdp.configure(image=oeil_ouvert)
        champMdp.configure(show="")
     else:
-       btn_oeil_mdp.configure(image=oeil_ferme)
        champMdp.configure(show=bullet)
+       btn_oeil_mdp.configure(image=oeil_ferme)
+
 def afficher_conf(btn_oeil_conf,champConf,oeil_ouvert,oeil_ferme):
     if champConf.cget("show") == bullet:
        btn_oeil_conf.configure(image=oeil_ouvert)
@@ -38,6 +38,7 @@ def etats(root,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUs
           mess.place_forget()
           creation.configure(state="normal")
           creation.configure(fg_color="#0d6efd")
+          creation.configure(hover_color="#3f8cfd")
           root.after(3000, mess.place_forget)
        else:
           mess.configure(text="Les deux mots de passe sont différents", text_color="#ffc107")
@@ -45,5 +46,4 @@ def etats(root,creation,btn_oeil_mdp,champMdp,btn_oeil_conf,mess,champConf,nomUs
           mess.place(x=280, y=310)
     else:
        creation.configure(state="disabled")
-       creation.configure(fg_color="#D9D9D9")
 

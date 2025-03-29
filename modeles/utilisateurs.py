@@ -1,4 +1,4 @@
-class Utilisateur():
+class Utilisateur:
     def __init__(self, nom, mot_de_passe):
         self.nom = nom
         self.mot_de_passe=mot_de_passe

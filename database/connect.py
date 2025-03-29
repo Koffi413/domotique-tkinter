@@ -6,10 +6,44 @@ if not bd:
     curseur.execute(
         """
         create table UTILISATEURS (
-        id integer primary key autoincrement,
-        Nom text not null,
+        Nom text not null primary key ,
         mot_de_passe text not null
         );
+        """
+    )
+    connect.commit()
+    curseur.execute(
+        """
+        create table MAISONS (
+        Nom text not null primary key ,
+        nombrePiece integer 
+        );"""
+    )
+    connect.commit()
+    curseur.execute(
+        """
+        create table PIECES (
+        Nom text not null,
+        superficie integer not null,
+        type text not null,
+        nomMaison text not null,
+        temperature integer not null,
+        ampoule integer not null,
+        foreign key (nomMaison) references MAISONS (Nom)
+        );
+        """
+    )
+    connect.commit()
+    curseur.execute(
+        """
+        CREATE TRIGGER UpdateNombrePieces_AfterInsert
+        AFTER INSERT ON PIECES
+        FOR EACH ROW
+        BEGIN
+            UPDATE MAISONS
+             SET nombrePiece = (SELECT COUNT(*) FROM PIECES WHERE nomMaison = NEW.nomMaison)
+             WHERE Nom = NEW.nomMaison;
+        END;
         """
     )
     connect.commit()
