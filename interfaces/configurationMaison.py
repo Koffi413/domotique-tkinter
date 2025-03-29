@@ -3,7 +3,7 @@ from fonctions.fonctions_config_maison import activeValide
 from fonctions.fonctions_glob import suivant
 
 
-def afficherPageConfig(app):
+def afficherPageConfig(app,nomUser):
     nomMaison = customtkinter.StringVar()
     nomPiece = customtkinter.StringVar()
     typePiece = customtkinter.IntVar(value=0)
@@ -18,11 +18,11 @@ def afficherPageConfig(app):
     #formulaire ajout de pieces
     labMais = customtkinter.CTkLabel(frameConfig, text="Nommez vôtre maison:")
     labMais.place(x=15,y=100)
-    champMais = customtkinter.CTkEntry(frameConfig,textvariable=nomMaison, width=400, height=30, placeholder_text="Ex: maison de vacances")
+    champMais = customtkinter.CTkEntry(frameConfig,textvariable=nomMaison, width=400, height=30)
     champMais.place(x=250, y=100)
     labPiece= customtkinter.CTkLabel(frameConfig, text="Nom de la pièce:")
     labPiece.place(x= 15, y=180)
-    champPiece = customtkinter.CTkEntry(frameConfig,textvariable=nomPiece, width=400,height=30, placeholder_text="Ex: chambre de Junior")
+    champPiece = customtkinter.CTkEntry(frameConfig,textvariable=nomPiece, width=400,height=30)
     champPiece.place(x=180, y=180)
 
     labType = customtkinter.CTkLabel(frameConfig, text="Type de pièce:")
@@ -43,8 +43,8 @@ def afficherPageConfig(app):
     btnValid.place(x=300,y =380)
     btnAjout = customtkinter.CTkButton(frameConfig,text="Ajouter une autre pièce", width=100,height=30,text_color="white",fg_color="#D9D9D9",hover_color="#D9D9D9")
     btnAjout.place(x=450,y =380)
-    suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameConfig, None,nomMaison.get()))
-    nomMaison.trace("w",lambda *args: activeValide(app,btnValid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))
-    nomPiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))
-    typePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison,nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))
-    superficiePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig))
+    suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameConfig, None,nomMaison.get(),None))
+    nomMaison.trace("w",lambda *args: activeValide(app,btnValid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig,nomUser))
+    nomPiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig,nomUser))
+    typePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison,nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig,nomUser))
+    superficiePiece.trace("w",lambda *args:activeValide(app,btnValid, nomMaison, nomPiece, typePiece, superficiePiece,btnAjout,champMais,champPiece,suiv,frameConfig,nomUser))

@@ -5,7 +5,7 @@ from controllers.requete_pieces import ajouterPieces,listePieces
 from fonctions.fonctions_creation_compte import bullet
 
 
-def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig):
+def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig,nomUser):
        nomMais = nomMaison.get()
        nomPie = nomPiece.get()
        superficiePie = superficiePiece.get()
@@ -15,12 +15,12 @@ def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnA
            btnvalid.configure(state="normal")
            btnvalid.configure(fg_color="#0d6efd")
            btnvalid.configure(hover_color="#3f8cfd")
-           btnvalid.configure(command=lambda :save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig))
+           btnvalid.configure(command=lambda :save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig,nomUser))
        else:
               btnvalid.configure(state="disabled")
 
 
-def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig):
+def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig,nomUser):
     nomMais=nomMaison.get()
     nomPiec = nomPiece.get()
     superficiePie=superficiePiece.get()
@@ -36,9 +36,8 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
     else:
         type="undefined"
     existe = existeMaison(nomMais)
-
     if len(existe)==0 :
-        insertMaison = ajouterMaisons(nomMais,0)
+        insertMaison = ajouterMaisons(nomMais,0,nomUser)
         if insertMaison:
             champMais.configure(state="disabled")
             champMais.configure(fg_color="#e6e6e6")

@@ -1,3 +1,6 @@
+from controllers.requete_utilisateurs import trouverUtilisateurs
+from fonctions.fonctions_glob import accueil
+
 bullet = "\u2022"
 def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):
     if champMdp.cget("show") == bullet:
@@ -6,9 +9,15 @@ def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):
     else:
        champMdp.configure(show=bullet)
        btn_oeil_mdp.configure(image=oeil_ferme)
-def connect(app,nomUser,mdpUser):
+def connect(app,connexion,nomUser,mdpUser,frameForm):
     nom = nomUser.get()
     mdp = mdpUser.get()
+    auth = trouverUtilisateurs(nom,mdp)
+    if len(auth) == 1:
+        accueil(app,connexion,frameForm,nom)
+    else:
+        return
+    #TODO MESSAGE D'ERREURS UTILISATEURS INTROUVABLE
 def etat(connexion,btn_oeil_mdp,champMdp,nomUser,mdpUser):
     nom = nomUser.get()
     mdp = mdpUser.get()

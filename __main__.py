@@ -6,6 +6,7 @@ from interfaces.connexion import afficherPageConnexion
 from interfaces.creation_compte import afficherPageCompte
 from interfaces.configurationMaison import afficherPageConfig
 from  interfaces.termine import afficherPageRecap
+from interfaces.accueil import afficherPageAccueil
 
 if __name__ == '__main__':
     customtkinter.set_default_color_theme("theme/theme.json")

@@ -1,6 +1,6 @@
 import __main__
 etape=0
-def suivant(root,suiv,frameForm,crea,nomMaison):
+def suivant(root,suiv,frameForm,crea,nomMaison,nomUser):
     global etape
     if etape == 0:
         suiv.place_forget()
@@ -13,7 +13,7 @@ def suivant(root,suiv,frameForm,crea,nomMaison):
         __main__.etapeConf.configure(text_color="#212529")
         __main__.barreFin.configure(fg_color="#D9D9D9")
         __main__.etapeFin.configure(text_color="#D9D9D9")
-        __main__.afficherPageConfig(root)
+        __main__.afficherPageConfig(root,nomUser)
         etape+=1
         return
     elif etape == 1:
@@ -35,3 +35,7 @@ import sys
 def redemarrer():
     python = sys.executable  # Récupère l'exécutable Python actuel
     os.execl(python, python, *sys.argv)
+def accueil(app,bouton,frame,nom):
+    bouton.place_forget()
+    frame.place_forget()
+    __main__.afficherPageAccueil(app,nom)

@@ -6,7 +6,7 @@ from database import connect as connection
 def ajouterUtilisateurs(nom,mdp):
     try:
         individu = compte.Utilisateur(nom, mdp)
-        requete ="""INSERT INTO UTILISATEURS(nom,mot_de_passe) values(?,?)"""
+        requete ="""INSERT INTO UTILISATEURS(LOWER(Nom),mot_de_passe) values(LOWER(?),?)"""
         connection.curseur.execute(requete,(individu.nom,individu.mot_de_passe))
         connection.connect.commit()
         return True
@@ -20,3 +20,13 @@ def existeUtilisateurs():
         return reponse
     except sqlite3.Error as e:
         return []
+def trouverUtilisateurs(nom,mdp):
+    try:
+        individu = compte.Utilisateur(nom,mdp)
+        req = """SELECT *  FROM UTILISATEURS WHERE LOWER(Nom) = LOWER(?) and mot_de_passe= ?"""
+        connection.curseur.execute(req,(individu.nom,individu.mot_de_passe))
+        rep = connection.curseur.fetchall()
+        return rep
+    except sqlite3.Error as e:
+        return []
+

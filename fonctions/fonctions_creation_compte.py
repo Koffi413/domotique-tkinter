@@ -7,9 +7,9 @@ bullet = "\u2022"
 def creer(app,frameForm,nomUser,mdpUser,crea):
     nom = nomUser.get()
     mdp = mdpUser.get()
-    insert = bd.ajouterUtilisateurs(nom, mdp)
+    insert = bd.ajouterUtilisateurs(nom,mdp)
     if insert:
-        suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameForm,crea,None))
+        suiv = customtkinter.CTkButton(app, text="Suivant", text_color="white", width=200, height=40,command=lambda: suivant(app, suiv, frameForm,crea,None,nom))
         suiv.place(relx=0.95, rely=0.90, anchor="se")
 
 def afficher_mdp(btn_oeil_mdp,champMdp,oeil_ouvert,oeil_ferme):

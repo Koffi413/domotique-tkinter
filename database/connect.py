@@ -16,7 +16,9 @@ if not bd:
         """
         create table MAISONS (
         Nom text not null primary key ,
-        nombrePiece integer 
+        nombrePiece integer,
+        user text not null ,
+        foreign key (user) references UTILISATEURS (Nom)
         );"""
     )
     connect.commit()
