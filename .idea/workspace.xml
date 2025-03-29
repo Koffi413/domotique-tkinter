@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/requete_pieces.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_pieces.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fonctions/fonctions_config_maison.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_config_maison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_creation_compte.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_glob.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_glob.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/configurationMaison.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/creation_compte.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/creation_compte.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +131,8 @@
       <workItem from="1743077713917" duration="3103000" />
       <workItem from="1743092687993" duration="11196000" />
       <workItem from="1743188167815" duration="56000" />
-      <workItem from="1743197100423" duration="16082000" />
+      <workItem from="1743197100423" duration="18833000" />
+      <workItem from="1743255581930" duration="2838000" />
     </task>
     <servers />
   </component>
@@ -158,6 +156,6 @@
     <SUITE FILE_PATH="coverage/ProjetISI$fonctions_config_maison.coverage" NAME="fonctions_config_maison Coverage Results" MODIFIED="1743100020617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fonctions" />
     <SUITE FILE_PATH="coverage/ProjetISI$requete_maisons.coverage" NAME="requete_maisons Coverage Results" MODIFIED="1743206821312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controllers" />
     <SUITE FILE_PATH="coverage/ProjetISI$creation_compte.coverage" NAME="creation_compte Coverage Results" MODIFIED="1743061866296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
-    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743244691355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743258433434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

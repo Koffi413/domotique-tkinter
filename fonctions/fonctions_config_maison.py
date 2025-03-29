@@ -1,11 +1,11 @@
 import customtkinter
 
 from controllers.requete_maisons import ajouterMaisons, existeMaison
-from controllers.requete_pieces import ajouterPieces
-from fonctions.fonctions_glob import suivant
+from controllers.requete_pieces import ajouterPieces,listePieces
+from fonctions.fonctions_creation_compte import bullet
 
 
-def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv):
+def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig):
        nomMais = nomMaison.get()
        nomPie = nomPiece.get()
        superficiePie = superficiePiece.get()
@@ -15,14 +15,14 @@ def activeValide(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnA
            btnvalid.configure(state="normal")
            btnvalid.configure(fg_color="#0d6efd")
            btnvalid.configure(hover_color="#3f8cfd")
-           btnvalid.configure(command=lambda :save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv))
+           btnvalid.configure(command=lambda :save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig))
        else:
               btnvalid.configure(state="disabled")
 
 
-def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv):
+def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,champMais,champPiece,btnsuiv,frameConfig):
     nomMais=nomMaison.get()
-    nomPiec=nomPiece.get()
+    nomPiec = nomPiece.get()
     superficiePie=superficiePiece.get()
     typePie=typePiece.get()
     if typePie==1:
@@ -44,6 +44,7 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
             champMais.configure(fg_color="#e6e6e6")
             insert = ajouterPieces(nomPiec,superficiePie,18,0,nomMais,type)
             if insert:
+                resumeAjout(nomMais,frameConfig)
                 btnvalid.configure(state="disabled")
                 btnvalid.configure(fg_color="#D9D9D9")
                 btnvalid.configure(hover_color="#D9D9D9")
@@ -57,6 +58,7 @@ def save(root,btnvalid,nomMaison,nomPiece,typePiece,superficiePiece,btnAjout,cha
         champMais.configure(fg_color="#e6e6e6")
         insert = ajouterPieces(nomPiec, superficiePie, 18, 0, nomMais, type)
         if insert:
+            resumeAjout(nomMais,frameConfig)
             btnvalid.configure(state="disabled")
             btnvalid.configure(fg_color="#D9D9D9")
             btnvalid.configure(hover_color="#D9D9D9")
@@ -76,5 +78,29 @@ def renitialise(root,nomPiece,typePiece,superficiePiece,btnAjout,champPiece,btns
     btnAjout.configure(state="disabled")
     btnAjout.configure(fg_color="#D9D9D9")
     btnAjout.configure(hover_color="#D9D9D9")
+
+def resumeAjout(nomMaison,frameConfig):
+    liste=[]
+    liste = listePieces(nomMaison)
+    if len(liste)==0:
+        return
+    else:
+        Labposx=20
+        posy=420
+        bulposx = 0
+        for x in liste:
+            if posy == 600:
+                Labposx =Labposx+400
+                posy=420
+                bulposx = bulposx+400
+            bul = customtkinter.CTkLabel(frameConfig,text=bullet)
+            bul.place(x=bulposx,y=posy)
+            label = customtkinter.StringVar()
+            label.set(f"{x[0]} , {x[2]} de {x[1]} m²")
+            element = customtkinter.CTkLabel(frameConfig,textvariable=label)
+            element.place(x=Labposx, y=posy)
+            posy=posy+30
+
+
 
 

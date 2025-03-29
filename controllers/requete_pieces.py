@@ -12,3 +12,12 @@ def ajouterPieces(nom,superficie,temperature,ampoule,nomMaison,typePiece):
     except connection.connect.Error as e:
         print(e)
         return False
+def listePieces(nomMaison):
+    try:
+        piece = Piece(None,None,nomMaison,None,None,None)
+        req= """SELECT *  FROM PIECES WHERE nomMaison=?"""
+        connection.curseur.execute(req,(piece.nomMaison,))
+        listp = connection.curseur.fetchall()
+        return listp
+    except connection.connect.Error as e:
+        return []
