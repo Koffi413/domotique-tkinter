@@ -39,3 +39,7 @@ def accueil(app,bouton,frame,nom):
     bouton.place_forget()
     frame.place_forget()
     __main__.afficherPageAccueil(app,nom)
+def deconnexion(root,frame,titre):
+    frame.place_forget()
+    titre.place_forget()
+    __main__.afficherPageConnexion(root)

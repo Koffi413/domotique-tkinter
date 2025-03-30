@@ -30,7 +30,7 @@ def afficherPageConnexion(app):
     btn_oeil_mdp.configure(hover_color="white")
     btn_oeil_mdp.place_forget()
     # boutoncréation
-    connexion = customtkinter.CTkButton(app, text="Se connecter", text_color="white", width=100, height=40,command=lambda: connect(app,connexion,nomUser, mdpUser,frameForm),fg_color="#D9D9D9", hover_color="#D9D9D9")
+    connexion = customtkinter.CTkButton(app, text="Se connecter", text_color="white", height=40,command=lambda: connect(app,connexion,nomUser, mdpUser,frameForm),fg_color="#D9D9D9", hover_color="#D9D9D9")
     connexion.place(relx=0.5, rely=0.78, anchor="s")
     nomUser.trace("w",lambda *args: etat(connexion, btn_oeil_mdp, champMdp, nomUser,mdpUser))
     mdpUser.trace("w",lambda *args: etat(connexion, btn_oeil_mdp, champMdp,nomUser,mdpUser))
