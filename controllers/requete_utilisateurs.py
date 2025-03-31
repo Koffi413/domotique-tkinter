@@ -6,7 +6,7 @@ from database import connect as connection
 def ajouterUtilisateurs(nom,mdp):
     try:
         individu = compte.Utilisateur(nom, mdp)
-        requete ="""INSERT INTO UTILISATEURS(LOWER(Nom),mot_de_passe) values(LOWER(?),?)"""
+        requete ="""INSERT INTO UTILISATEURS(Nom,mot_de_passe) values(LOWER(?),?)"""
         connection.curseur.execute(requete,(individu.nom,individu.mot_de_passe))
         connection.connect.commit()
         return True

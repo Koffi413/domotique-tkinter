@@ -1,6 +1,6 @@
 import customtkinter
 
-from fonctions.fonctions_accueil import page, iconReglage, iconUser
+from fonctions.fonctions_accueil import page, iconReglage, iconUser, typePieces
 from fonctions.fonctions_glob import deconnexion
 
 
@@ -9,7 +9,7 @@ def afficherPageAccueil(app,nomUser):
     frame.place(relx=0.5, rely=1, anchor="s")
     titre = customtkinter.CTkLabel(app, font=('Lota Grotesque', 60, 'bold', 'underline'))
     page(nomUser,titre)
-    btnSalon = customtkinter.CTkButton(frame,text="Salons",width=150,height=150)
+    btnSalon = customtkinter.CTkButton(frame,text="Salons",width=150,height=150,command=lambda :typePieces(titre.cget("text"),"salon"))
     btnSalon.place(relx=0.4, rely=0.1, anchor="n")
     btnCuisine=customtkinter.CTkButton(frame,text="Cuisines",width=150,height=150)
     btnCuisine.place(relx=0.4, rely=0.8, anchor="s")

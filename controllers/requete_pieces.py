@@ -21,3 +21,12 @@ def listePieces(nomMaison):
         return listp
     except connection.connect.Error as e:
         return []
+def listeTypePiece(nomMaison,type):
+    try:
+        piece = Piece(None,type,nomMaison,None,None,None)
+        req= """SELECT *  FROM PIECES WHERE nomMaison=LOWER(?) and type=LOWER(?)"""
+        connection.curseur.execute(req,(piece.nomMaison,piece.type))
+        liste= connection.curseur.fetchall()
+        return liste
+    except connection.connect.Error as e:
+        return []
