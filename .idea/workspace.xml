@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/requete_pieces.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_pieces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_accueil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/accueil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/configurationMaison.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +138,8 @@
       <workItem from="1743330584325" duration="5759000" />
       <workItem from="1743354923090" duration="3000" />
       <workItem from="1743417639707" duration="2080000" />
+      <workItem from="1743423091111" duration="494000" />
+      <workItem from="1743439257885" duration="532000" />
     </task>
     <servers />
   </component>
@@ -164,7 +164,7 @@
     <SUITE FILE_PATH="coverage/ProjetISI$termine.coverage" NAME="termine Coverage Results" MODIFIED="1743260451078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
     <SUITE FILE_PATH="coverage/ProjetISI$requete_maisons.coverage" NAME="requete_maisons Coverage Results" MODIFIED="1743206821312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controllers" />
     <SUITE FILE_PATH="coverage/ProjetISI$creation_compte.coverage" NAME="creation_compte Coverage Results" MODIFIED="1743061866296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
-    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743352236574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743439464797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjetISI$test.coverage" NAME="test Coverage Results" MODIFIED="1743267226898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
   </component>
 </project>

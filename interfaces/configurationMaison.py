@@ -1,3 +1,5 @@
+import tkinter
+
 import customtkinter
 from fonctions.fonctions_config_maison import activeValide
 from fonctions.fonctions_glob import suivant
@@ -11,7 +13,7 @@ def afficherPageConfig(app,nomUser):
     superficiePiece.set("0")
 
     frameConfig = customtkinter.CTkFrame(app, width=1100, height=600)
-    frameConfig.place(x=150, y=20)
+    frameConfig.place(relx=0.55,rely=0.45,anchor="center")
     titre = customtkinter.CTkLabel(frameConfig,text="Configurations")
     titre.cget("font").configure(size=30)
     titre.place(x=7,y=7)
