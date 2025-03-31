@@ -43,3 +43,9 @@ def deconnexion(root,frame,titre):
     frame.place_forget()
     titre.place_forget()
     __main__.afficherPageConnexion(root)
+def vider_frame(frame):
+    for widget in frame.winfo_children():
+        widget.destroy()
+def retour(app,nom,frame):
+    vider_frame(frame)
+    __main__.afficherPageAccueil(app,nom)

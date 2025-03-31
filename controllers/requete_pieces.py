@@ -24,7 +24,7 @@ def listePieces(nomMaison):
 def listeTypePiece(nomMaison,type):
     try:
         piece = Piece(None,type,nomMaison,None,None,None)
-        req= """SELECT *  FROM PIECES WHERE nomMaison=LOWER(?) and type=LOWER(?)"""
+        req= """SELECT *  FROM PIECES WHERE nomMaison=? and type=?"""
         connection.curseur.execute(req,(piece.nomMaison,piece.type))
         liste= connection.curseur.fetchall()
         return liste

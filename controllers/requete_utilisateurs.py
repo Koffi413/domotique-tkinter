@@ -23,7 +23,7 @@ def existeUtilisateurs():
 def trouverUtilisateurs(nom,mdp):
     try:
         individu = compte.Utilisateur(nom,mdp)
-        req = """SELECT *  FROM UTILISATEURS WHERE LOWER(Nom) = LOWER(?) and mot_de_passe= ?"""
+        req = """SELECT *  FROM UTILISATEURS WHERE Nom = ? and mot_de_passe= ?"""
         connection.curseur.execute(req,(individu.nom,individu.mot_de_passe))
         rep = connection.curseur.fetchall()
         return rep

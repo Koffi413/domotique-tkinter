@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0501715e-73a9-4547-bcaa-a52bf87cfac5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/icons/accueil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/allume.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/eteint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/modifier.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/retour.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/configurationMaison.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/configurationMaison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/requete_pieces.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_pieces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/requete_utilisateurs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_accueil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctions/fonctions_glob.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_glob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/accueil.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,40 +47,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.configurationMaison.executor&quot;: &quot;Run&quot;,
-    &quot;Python.connect.executor&quot;: &quot;Run&quot;,
-    &quot;Python.creation_compte.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fonctions_config_maison.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fonctions_glob.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fonctions_interface1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.requete_maisons.executor&quot;: &quot;Run&quot;,
-    &quot;Python.termine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ttk.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utilisateurs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cyria/PycharmProjects/ProjetISI/icons&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.spelling&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Python.__main__.executor": "Run",
+    "Python.configurationMaison.executor": "Run",
+    "Python.connect.executor": "Run",
+    "Python.creation_compte.executor": "Run",
+    "Python.fonctions_config_maison.executor": "Run",
+    "Python.fonctions_glob.executor": "Run",
+    "Python.fonctions_interface1.executor": "Run",
+    "Python.requete_maisons.executor": "Run",
+    "Python.termine.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.ttk.executor": "Run",
+    "Python.utilisateurs.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/cyria/PycharmProjects/ProjetISI/icons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\icons" />
@@ -139,7 +150,7 @@
       <workItem from="1743354923090" duration="3000" />
       <workItem from="1743417639707" duration="2080000" />
       <workItem from="1743423091111" duration="494000" />
-      <workItem from="1743439257885" duration="532000" />
+      <workItem from="1743439257885" duration="14770000" />
     </task>
     <servers />
   </component>
@@ -164,7 +175,7 @@
     <SUITE FILE_PATH="coverage/ProjetISI$termine.coverage" NAME="termine Coverage Results" MODIFIED="1743260451078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
     <SUITE FILE_PATH="coverage/ProjetISI$requete_maisons.coverage" NAME="requete_maisons Coverage Results" MODIFIED="1743206821312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controllers" />
     <SUITE FILE_PATH="coverage/ProjetISI$creation_compte.coverage" NAME="creation_compte Coverage Results" MODIFIED="1743061866296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
-    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743439464797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743457823305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjetISI$test.coverage" NAME="test Coverage Results" MODIFIED="1743267226898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
   </component>
 </project>
