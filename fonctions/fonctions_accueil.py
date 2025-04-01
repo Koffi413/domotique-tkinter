@@ -6,6 +6,10 @@ from controllers.requete_pieces import listeTypePiece
 from fonctions.fonctions_glob import vider_frame, retour
 eclairage =0
 
+iconSalon = customtkinter.CTkImage(light_image=Image.open("icons/salon.png"), size=(100,100))
+iconCuisine = customtkinter.CTkImage(light_image=Image.open("icons/cuisine.png"), size=(100,100))
+iconChambre = customtkinter.CTkImage(light_image=Image.open("icons/lit.png"), size=(100,100))
+iconBain = customtkinter.CTkImage(light_image=Image.open("icons/bain.png"), size=(100,100))
 iconReglage = customtkinter.CTkImage(light_image=Image.open("icons/reglage.png"), size=(20,20))
 iconUser= customtkinter.CTkImage(light_image=Image.open("icons/user.png"), size=(20,20))
 iconAdd = customtkinter.CTkImage(light_image=Image.open("icons/add.png"), size=(20,20))
@@ -14,8 +18,8 @@ iconRetour = customtkinter.CTkImage(light_image=Image.open("icons/retour.png"), 
 iconModifier = customtkinter.CTkImage(light_image=Image.open("icons/modifier.png"), size=(20,20))
 iconAmpoule_on = customtkinter.CTkImage(light_image=Image.open("icons/ampoule_on.png"), size=(200,200))
 iconAmpoule_off = customtkinter.CTkImage(light_image=Image.open("icons/ampoule_off.png"), size=(200,200))
-iconEteint = customtkinter.CTkImage(light_image=Image.open("icons/eteint.png"), size=(100,100))
-iconAllume = customtkinter.CTkImage(light_image=Image.open("icons/allume.png"), size=(100,100))
+iconEteint = customtkinter.CTkImage(light_image=Image.open("icons/eteint.png"), size=(50,50))
+iconAllume = customtkinter.CTkImage(light_image=Image.open("icons/allume.png"), size=(50,50))
 
 def page(nom,titre):
     maisonUser = trouverMaison(nom)
