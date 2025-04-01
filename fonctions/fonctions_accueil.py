@@ -16,10 +16,12 @@ iconAdd = customtkinter.CTkImage(light_image=Image.open("icons/add.png"), size=(
 iconAccueil = customtkinter.CTkImage(light_image=Image.open("icons/accueil.png"), size=(20,20))
 iconRetour = customtkinter.CTkImage(light_image=Image.open("icons/retour.png"), size=(20,20))
 iconModifier = customtkinter.CTkImage(light_image=Image.open("icons/modifier.png"), size=(20,20))
-iconAmpoule_on = customtkinter.CTkImage(light_image=Image.open("icons/ampoule_on.png"), size=(200,200))
-iconAmpoule_off = customtkinter.CTkImage(light_image=Image.open("icons/ampoule_off.png"), size=(200,200))
+iconAmpoule_on = customtkinter.CTkImage(light_image=Image.open("icons/ampoule_on.png"), size=(170,170))
+iconAmpoule_off = customtkinter.CTkImage(light_image=Image.open("icons/ampoule_off.png"), size=(170,170))
 iconEteint = customtkinter.CTkImage(light_image=Image.open("icons/eteint.png"), size=(50,50))
 iconAllume = customtkinter.CTkImage(light_image=Image.open("icons/allume.png"), size=(50,50))
+iconMoins = customtkinter.CTkImage(light_image=Image.open("icons/moins.png"), size=(50,50))
+iconPlus = customtkinter.CTkImage(light_image=Image.open("icons/plus.png"), size=(50,50))
 
 def page(nom,titre):
     maisonUser = trouverMaison(nom)
@@ -44,7 +46,7 @@ def typePieces(frame,nomMaison,type,app,nomUser):
             typePiece = customtkinter.CTkLabel(frame,text=f"{type}(s)".upper())
             typePiece.cget("font").configure(size=35)
             typePiece.place(relx=0.2,rely=0.5, anchor='w')
-            btnPiece = customtkinter.CTkButton(frame, text=piece[i][0], width=150, height=150,command=lambda: gererPiece(frame,piece[i],nomUser,app))
+            btnPiece = customtkinter.CTkButton(frame, text=piece[i][0], width=100, height=100,command=lambda: gererPiece(frame,piece[i],nomUser,app))
             btnPiece.place(relx=relx, rely=rely, anchor="n")
             if i ==2:
                 relx = 0.4
@@ -56,25 +58,25 @@ def typePieces(frame,nomMaison,type,app,nomUser):
 
 def gererPiece(frame,piece,nomUser,app):
     vider_frame(frame)
+    temperature = customtkinter.IntVar()
+    temperature.set(18)
     retours = customtkinter.CTkButton(frame, text="Retour",image=iconRetour,command=lambda :typePieces(frame,piece[3],piece[2],app,nomUser),fg_color="transparent",hover=False,text_color="black")
     retours.place(relx=0.2, rely=0.3, anchor='w')
     btnAjout = customtkinter.CTkButton(frame, text="Renommer", image=iconModifier, text_color="black",fg_color="transparent", hover=False)
     btnAjout.place(relx=0.8, rely=0.3, anchor='e')
     btnAccueil = customtkinter.CTkButton(frame, text="Accueil", image=iconAccueil, text_color="black",fg_color="transparent", hover=False,command=lambda: retour(app, nomUser, frame))
     btnAccueil.place(relx=0.8, rely=0.4, anchor='e')
-    if eclairage ==1:
-        etat = iconAmpoule_on
-        interup = iconAllume
-        texte = "Éteindre"
-    else:
-        etat = iconAmpoule_off
-        interup = iconEteint
-        texte = "Allumer"
-
-    ampoule = customtkinter.CTkButton(frame,text="Eclairage", image=etat, text_color="black",fg_color="transparent", hover=False,compound="bottom")
+    ampoule = customtkinter.CTkButton(frame,text="Eclairage", image=iconAmpoule_off, text_color="black",fg_color="transparent", hover=False,compound="bottom")
     ampoule.place(relx=0.6, rely=0.5, anchor='center')
-    interrupteur = customtkinter.CTkButton(frame,text=texte, image=interup, text_color="black",fg_color="transparent", hover=False,compound="top",command=lambda :lumiere(ampoule,interrupteur))
+    interrupteur = customtkinter.CTkButton(frame,text="Allumer", image=iconEteint, text_color="black",fg_color="transparent", hover=False,compound="top",command=lambda :lumiere(ampoule,interrupteur))
     interrupteur.place(relx=0.6, rely=0.8, anchor='center')
+    temp = customtkinter.CTkLabel(frame,text=f"{str(temperature.get())}°C")
+    temp.cget("font").configure(size=100)
+    temp.place(relx=0.4, rely=0.6, anchor='center')
+    plus = customtkinter.CTkButton(frame,text="", image=iconPlus,hover=False, fg_color="transparent",command=lambda :temperatures(temperature,"+",temp))
+    plus.place(relx=0.5, rely=0.6, anchor='center')
+    moins = customtkinter.CTkButton(frame, text="", image=iconMoins, hover=False, fg_color="transparent",command=lambda :temperatures(temperature,"-",temp))
+    moins.place(relx=0.3, rely=0.6, anchor='center')
 def lumiere(ampoule,bouton):
     global eclairage
     if eclairage ==1:
@@ -87,3 +89,14 @@ def lumiere(ampoule,bouton):
         bouton.configure(image=iconEteint)
         bouton.configure(text="Allumer")
         eclairage=1
+def temperatures(degree,action,temp):
+    if action=="+":
+        if degree.get() == 25:
+            return
+        degree.set(degree.get()+1)
+        temp.configure(text=f"{str(degree.get())}°C")
+    else:
+        if degree.get() == 15:
+            return
+        degree.set(degree.get() - 1)
+        temp.configure(text=f"{str(degree.get())}°C")
