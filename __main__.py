@@ -17,7 +17,7 @@ if __name__ == '__main__':
     root.geometry(f"{screen_width}x{screen_height}+0+0")
     root.title('KeepControl')
     im = customtkinter.CTkLabel(root, text="", image=logo)
-    im.place(x=0, y=0)
+    im.place(relx=0, rely=0,anchor="nw")
     # Progression
     existe = existeUtilisateurs()
     if len(existe) == 0:
