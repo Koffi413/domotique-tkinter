@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fonctions/fonctions_accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions/fonctions_accueil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/accueil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/connexion.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/connexion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,40 +37,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Python.__main__.executor": "Run",
-    "Python.configurationMaison.executor": "Run",
-    "Python.connect.executor": "Run",
-    "Python.creation_compte.executor": "Run",
-    "Python.fonctions_config_maison.executor": "Run",
-    "Python.fonctions_glob.executor": "Run",
-    "Python.fonctions_interface1.executor": "Run",
-    "Python.requete_maisons.executor": "Run",
-    "Python.termine.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.ttk.executor": "Run",
-    "Python.utilisateurs.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/cyria/PycharmProjects/ProjetISI/icons",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.configurationMaison.executor&quot;: &quot;Run&quot;,
+    &quot;Python.connect.executor&quot;: &quot;Run&quot;,
+    &quot;Python.creation_compte.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fonctions_config_maison.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fonctions_glob.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fonctions_interface1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.requete_maisons.executor&quot;: &quot;Run&quot;,
+    &quot;Python.termine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ttk.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utilisateurs.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cyria/PycharmProjects/ProjetISI/icons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.spelling&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cyria\PycharmProjects\ProjetISI\icons" />
@@ -147,7 +145,8 @@
       <workItem from="1743509940670" duration="35000" />
       <workItem from="1743510022199" duration="115000" />
       <workItem from="1743527849276" duration="3330000" />
-      <workItem from="1743641604802" duration="8519000" />
+      <workItem from="1743641604802" duration="9071000" />
+      <workItem from="1743692188290" duration="723000" />
     </task>
     <servers />
   </component>
@@ -172,7 +171,7 @@
     <SUITE FILE_PATH="coverage/ProjetISI$termine.coverage" NAME="termine Coverage Results" MODIFIED="1743260451078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
     <SUITE FILE_PATH="coverage/ProjetISI$requete_maisons.coverage" NAME="requete_maisons Coverage Results" MODIFIED="1743206821312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controllers" />
     <SUITE FILE_PATH="coverage/ProjetISI$creation_compte.coverage" NAME="creation_compte Coverage Results" MODIFIED="1743061866296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
-    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743650151457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjetISI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1743692912039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjetISI$test.coverage" NAME="test Coverage Results" MODIFIED="1743267226898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
   </component>
 </project>

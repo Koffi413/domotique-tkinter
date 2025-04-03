@@ -10,6 +10,7 @@ from interfaces.accueil import afficherPageAccueil
 customtkinter.set_default_color_theme("theme/theme.json")
 logo = customtkinter.CTkImage(light_image=Image.open("icons/logo.png"), size=(100, 100))
 root = customtkinter.CTk()
+root.toplevel = None
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 root.geometry(f"{screen_width}x{screen_height}+0+0")

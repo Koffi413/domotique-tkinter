@@ -56,7 +56,6 @@ def typePieces(frame,nomMaison,type,app,nomUser):
                 relx = relx+0.1
     else:
         vider_frame(frame)
-        app.toplevel=None
         aucun = customtkinter.CTkLabel(frame,text="",image=iconAucun,text_color="#edeae7",compound="top")
         aucun.place(relx=0.5,rely=0.3,anchor="n")
         texte = customtkinter.CTkLabel(frame,text="Aucune pièce ajoutée")
@@ -111,7 +110,6 @@ def temperatures(temperature,action,temp):
             return
         temperature.set(temperature.get() - 1)
         temp.configure(text=f"{temperature.get()}°C")
-
 def ajoutPiece(app, nomMais,type,frame,nomUser):
     if app.toplevel is None or not app.toplevel.winfo_exists():
         app.toplevel = customtkinter.CTkToplevel(app)
