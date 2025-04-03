@@ -2,7 +2,7 @@ import customtkinter
 from  PIL import Image
 
 from controllers.requete_maisons import trouverMaison
-from controllers.requete_pieces import listeTypePiece
+from controllers.requete_pieces import listeTypePiece, ajouterPieces
 from fonctions.fonctions_glob import vider_frame, retour
 eclairage =0
 
@@ -22,6 +22,7 @@ iconEteint = customtkinter.CTkImage(light_image=Image.open("icons/eteint.png"), 
 iconAllume = customtkinter.CTkImage(light_image=Image.open("icons/allume.png"), size=(50,50))
 iconMoins = customtkinter.CTkImage(light_image=Image.open("icons/moins.png"), size=(50,50))
 iconPlus = customtkinter.CTkImage(light_image=Image.open("icons/plus.png"), size=(50,50))
+iconAucun = customtkinter.CTkImage(light_image=Image.open("icons/sad.png"), size=(100,100))
 
 def page(nom,titre):
     maisonUser = trouverMaison(nom)
@@ -33,7 +34,7 @@ def typePieces(frame,nomMaison,type,app,nomUser):
     piece = listeTypePiece(nomMaison.lower(),type)
     if len(piece) > 0:
         vider_frame(frame)
-        btnAjout = customtkinter.CTkButton(frame, text="Ajouter une autre pièce", image=iconAdd,text_color="black", fg_color="transparent",hover=False)
+        btnAjout = customtkinter.CTkButton(frame, text="Ajouter une autre pièce", image=iconAdd,text_color="black", fg_color="transparent",hover=False,command= lambda :ajoutPiece(app,nomMaison,type,frame,nomUser))
         btnAjout.place(relx=0.8,rely=0.3, anchor='e')
         btnAccueil = customtkinter.CTkButton(frame, text="Accueil", image=iconAccueil, text_color="black",fg_color="transparent",hover=False, command=lambda: retour(app, nomUser, frame))
         btnAccueil.place(relx=0.8, rely=0.4, anchor='e')
@@ -53,13 +54,23 @@ def typePieces(frame,nomMaison,type,app,nomUser):
                 rely = rely+0.3
             else:
                 relx = relx+0.1
-
-
+    else:
+        vider_frame(frame)
+        app.toplevel=None
+        aucun = customtkinter.CTkLabel(frame,text="",image=iconAucun,text_color="#edeae7",compound="top")
+        aucun.place(relx=0.5,rely=0.3,anchor="n")
+        texte = customtkinter.CTkLabel(frame,text="Aucune pièce ajoutée")
+        texte.cget("font").configure(size=45)
+        texte.place(relx=0.5,rely=0.6,anchor="center")
+        btnAjout = customtkinter.CTkButton(frame, text="Nouvelle pièce", image=iconAdd,text_color="black", fg_color="transparent",hover=False,command=lambda :ajoutPiece(app,nomMaison,type,frame,nomUser))
+        btnAjout.place(relx=0.4,rely=0.9, anchor='center')
+        btnAccueil = customtkinter.CTkButton(frame, text="Accueil", image=iconAccueil, text_color="black",fg_color="transparent",hover=False, command=lambda: retour(app, nomUser, frame))
+        btnAccueil.place(relx=0.6, rely=0.9, anchor='center')
 
 def gererPiece(frame,piece,nomUser,app):
     vider_frame(frame)
     temperature = customtkinter.IntVar()
-    temperature.set(18)
+    temperature.set(piece[4])
     retours = customtkinter.CTkButton(frame, text="Retour",image=iconRetour,command=lambda :typePieces(frame,piece[3],piece[2],app,nomUser),fg_color="transparent",hover=False,text_color="black")
     retours.place(relx=0.2, rely=0.3, anchor='w')
     btnAjout = customtkinter.CTkButton(frame, text="Renommer", image=iconModifier, text_color="black",fg_color="transparent", hover=False)
@@ -70,7 +81,7 @@ def gererPiece(frame,piece,nomUser,app):
     ampoule.place(relx=0.6, rely=0.5, anchor='center')
     interrupteur = customtkinter.CTkButton(frame,text="Allumer", image=iconEteint, text_color="black",fg_color="transparent", hover=False,compound="top",command=lambda :lumiere(ampoule,interrupteur))
     interrupteur.place(relx=0.6, rely=0.8, anchor='center')
-    temp = customtkinter.CTkLabel(frame,text=f"{str(temperature.get())}°C")
+    temp = customtkinter.CTkLabel(frame,text=f"{temperature.get()}°C")
     temp.cget("font").configure(size=100)
     temp.place(relx=0.4, rely=0.6, anchor='center')
     plus = customtkinter.CTkButton(frame,text="", image=iconPlus,hover=False, fg_color="transparent",command=lambda :temperatures(temperature,"+",temp))
@@ -89,14 +100,52 @@ def lumiere(ampoule,bouton):
         bouton.configure(image=iconEteint)
         bouton.configure(text="Allumer")
         eclairage=1
-def temperatures(degree,action,temp):
+def temperatures(temperature,action,temp):
     if action=="+":
-        if degree.get() == 25:
+        if temperature.get() == 25:
             return
-        degree.set(degree.get()+1)
-        temp.configure(text=f"{str(degree.get())}°C")
+        temperature.set(temperature.get() + 1)
+        temp.configure(text=f"{temperature.get()}°C")
     else:
-        if degree.get() == 15:
+        if temperature.get() == 15:
             return
-        degree.set(degree.get() - 1)
-        temp.configure(text=f"{str(degree.get())}°C")
+        temperature.set(temperature.get() - 1)
+        temp.configure(text=f"{temperature.get()}°C")
+
+def ajoutPiece(app, nomMais,type,frame,nomUser):
+    if app.toplevel is None or not app.toplevel.winfo_exists():
+        app.toplevel = customtkinter.CTkToplevel(app)
+        app.toplevel.geometry("450x150")
+        app.toplevel.title('KeepControl')
+        nomPiece = customtkinter.StringVar()
+        superficiePiece = customtkinter.StringVar()
+        superficiePiece.set("0")
+        labPiece = customtkinter.CTkLabel(app.toplevel, text="Nom de la pièce:")
+        labPiece.place(relx=0, rely=0,anchor="nw")
+        champPiece = customtkinter.CTkEntry(app.toplevel, textvariable=nomPiece, width=200, height=30)
+        champPiece.place(relx=0.6, rely=0,anchor="n")
+        labType = customtkinter.CTkLabel(app.toplevel, text="Type de pièce:")
+        labType.place(relx=0, rely=0.2)
+        types = customtkinter.CTkLabel(app.toplevel, text=type)
+        types.place(relx=0.3, rely=0.2)
+        labSuperficie = customtkinter.CTkLabel(app.toplevel, text="Superficie (m²):")
+        labSuperficie.place(relx=0, rely=0.4)
+        champSuperficie = customtkinter.CTkEntry(app.toplevel, textvariable=superficiePiece, width=60, justify="center")
+        champSuperficie.place(relx=0.4, rely=0.4)
+        btnAnnuler = customtkinter.CTkButton(app.toplevel, text="annuler", width=80, height=30, text_color="white",
+                                           fg_color="#0d6efd", hover_color="#3f8cfd",command=lambda :fermer(app))
+        btnAnnuler.place(relx=0.8, rely=1, anchor='s')
+        btnValid = customtkinter.CTkButton(app.toplevel, text="Valider", width=80, height=30, text_color="white",fg_color="#0d6efd", hover_color="#3f8cfd",command=lambda :valide(app,nomPiece,superficiePiece,nomMais,type,frame,nomUser))
+        btnValid.place(relx=0.4, rely=1, anchor='s')
+    else:
+        app.toplevel.focus()
+
+def valide(app,nomPiec,superficiePie,nomMais,type,frame,nomUser):
+    insert = ajouterPieces(nomPiec.get(), superficiePie.get(), 18, 0, nomMais.lower(), type)
+    if insert:
+        fermer(app)
+        typePieces(frame,nomMais,type,app,nomUser)
+
+def fermer(app):
+    app.toplevel.destroy()
+    app.toplevel = None
